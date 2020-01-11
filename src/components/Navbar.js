@@ -6,25 +6,28 @@ import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
-
+  appBar: {
+    background: "transparent",
+    boxShadow: "none",
+  },
+  toolbar: {
+    float: "right"
+  }
 }));
 
 export default function Navbar() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton className={classes.menuButton} edge="start" color="inherit" aria-label="menu">
-                        Matthew Deogracias
-                    </IconButton>
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Education</Button>
-                    <Button color="inherit">Experience</Button>
-                    <Button color="inherit">Projects</Button>
-                </Toolbar>
-            </AppBar>
-        </div>
-    );
+  return (
+    <div className={classes.root}>
+      <AppBar className={classes.appBar} position="fixed">
+        <Toolbar className={classes.toolbar}>
+          <Button disableRipple color="inherit">About</Button>
+          <Button disableRipple color="inherit">Education</Button>
+          <Button disableRipple color="inherit">Experience</Button>
+          <Button disableRipple color="inherit">Projects</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
