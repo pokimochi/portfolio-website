@@ -1,39 +1,24 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Navbar from './components/Navbar';
-import HeroPage from './components/HeroPage';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    background: "#00192D",
-  },
-  footer: {
-    width: "100vw",
-    height: "20vh",
-    background: "#001221",
-    marginTop: "10vh"
-  }
-}));
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      {/* <Navbar /> */}
-      <HeroPage />
-      <Grid container alignContent="center">
-        <Grid item xs={1}/>
-        <Grid item xs={10}>
-          <Paper elevation={3}>
-            <h1 style={{height: "100vh", width: "100vw"}}></h1>
-          </Paper>
-        </Grid>
-      </Grid> 
-      <div className={classes.footer}>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
