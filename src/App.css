@@ -8,16 +8,13 @@
 }
 
 #avatar {
-  width: 300px;
-  background-color: #EF3444;
-  border-radius: 50%;
-  background-size: cover;
+  width: 20em;
 }
 
 #hero-page {
   height: 100vh;
   width: 100vw;
-  background-color: #00132D;
+  background-color: #103A89;
   margin-bottom: 5vh;
 }
 
@@ -31,7 +28,7 @@
 }
 
 .hero-title, .hero-sub-title {
-  font-size: 3.5em;
+  font-size: 2.75em;
 }
 
 .hero-title {
@@ -95,7 +92,7 @@
 
 .card-button {
   margin: 5% 5%;
-  background-color: #3F3F3F; /* Green */
+  background-color: #EF3444; 
   border: none;
   color: white;
   padding: 15px 32px;

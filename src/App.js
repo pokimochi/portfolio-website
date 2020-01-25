@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import "@material/layout-grid/mdc-layout-grid.scss";
-import avatar from './images/avatar4.svg';
+import avatar from './images/avatar.svg';
 import expo1 from './images/expo1.png';
 import ginhawa1 from './images/ginhawa1.png';
 import presentation1 from './images/presentation1.png';
