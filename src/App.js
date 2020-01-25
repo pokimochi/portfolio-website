@@ -33,8 +33,8 @@ function App() {
                   <div className="card-content">
                     <div className="card-title">Intro To Websites</div>
                     <div className="card-description">Taught the basics of HTML, CSS, and JavaScript by walking through the development of a web-based Tic Tac Toe game.</div>
-                    <a href="https://codepen.io/poki_mochi/pen/oNgVxye" target="_blank" rel="noopener noreferrer" className="card-button">View</a>
                   </div>
+                  <a href="https://codepen.io/poki_mochi/pen/oNgVxye" target="_blank" rel="noopener noreferrer" className="card-button">View</a>
                 </div>
               </div>
               <div class="mdc-layout-grid__cell">
@@ -43,8 +43,8 @@ function App() {
                   <div className="card-content">
                     <div className="card-title">Miniature Disaster Response Robot</div>
                     <div className="card-description">A miniature disaster response robot that simulates real-life disaster response robots by locating figures in a wooden maze. Showcased at the University of South Florida's Engineering EXPO 2019.</div>
-                    <a href="https://github.com/Society-of-Competitive-Programmers/Expo2019" target="_blank" rel="noopener noreferrer" className="card-button">View</a>
                   </div>
+                  <a href="https://github.com/Society-of-Competitive-Programmers/Expo2019" target="_blank" rel="noopener noreferrer" className="card-button">View</a>
                 </div>
               </div>
               <div class="mdc-layout-grid__cell">
@@ -53,8 +53,8 @@ function App() {
                   <div className="card-content">
                     <div className="card-title">Non-Profit Website</div>
                     <div className="card-description">Website that offers rehabilitation for abused women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.</div>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="card-button">IN-PROGRESS</a>
                   </div>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="card-button">In Progress</a>
                 </div>
               </div>
             </div>
