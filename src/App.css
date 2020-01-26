@@ -14,7 +14,7 @@
 #hero-page {
   height: 100vh;
   width: 100vw;
-  background-color: #103A89;
+  background-color: #C9F0FF;
   margin-bottom: 5vh;
 }
 
@@ -24,11 +24,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: #333745;
+}
+
+.social-media-links {
+  padding: 0.75em;
+  width: 3.2em;
 }
 
 .hero-title, .hero-sub-title {
-  font-size: 2.75em;
+  font-size: 4vh;
 }
 
 .hero-title {
@@ -58,6 +63,8 @@
   width: 100%;
   height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-flow: column;
 }
 
 .card-image {
@@ -67,6 +74,10 @@
   object-fit: cover;
 }
 
+.card-image:hover {
+  
+}
+
 .card, .card-image {
   border-radius: 4px;
 }
@@ -74,6 +85,7 @@
 .card-content {
   width: 90%;
   padding: 3% 5%;
+  flex-grow: 1;
 }
 
 .card-title, .card-description, .card-button {
@@ -92,8 +104,7 @@
 
 .card-button {
   margin: 5% 5%;
-  background-color: #EF3444; 
-  border: none;
+  background-color: #FF6569; 
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -102,6 +113,7 @@
   font-size: 16px;
   border-radius: 4em;
   font-weight: 700;
+  max-width: 26%;
 }
 
 #footer {
