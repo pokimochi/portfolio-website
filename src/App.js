@@ -35,7 +35,11 @@ function App() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in hac habitasse. Sollicitudin ac orci phasellus egestas. In dictum non consectetur a. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien.
           </span>
         </div>
-        <div className="work-experience">
+        <div id="about">
+          <h1 className="section-title">Work Experience</h1>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in hac habitasse. Sollicitudin ac orci phasellus egestas. In dictum non consectetur a. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien.
+          </span>
         </div>
         <div id="projects">
           <h1 className="section-title">Projects</h1>
@@ -46,7 +50,7 @@ function App() {
                   <img className="card-image" src={presentation1} alt="Intro to Websites Thumbnail" />
                   <div className="card-content">
                     <div className="card-title">Intro To Websites</div>
-                    <div className="card-description">Taught the basics of HTML, CSS, and JavaScript by walking through the development of a web-based Tic Tac Toe game.</div>
+                    <div className="card-description">Taught the basics of web development by walking through how to make a web-based Tic Tac Toe game.</div>
                   </div>
                   <a href="https://codepen.io/poki_mochi/pen/oNgVxye" target="_blank" rel="noopener noreferrer" className="card-button">View Project</a>
                 </div>
