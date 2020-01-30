@@ -5,6 +5,11 @@
 .app-content {
   margin-left: 15vw;
   margin-right: 15vw;
+  
+}
+
+.app-content div {
+  
 }
 
 #avatar {
@@ -45,17 +50,13 @@
 }
 
 .section-title {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 400;
 }
 
-#about {
+.section {
   margin-bottom: 5vh;
 
-}
-
-#projects {
-  margin-bottom: 10vh;
 }
 
 .card {
@@ -63,6 +64,8 @@
   width: 100%;
   height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-flow: column;
 }
@@ -75,7 +78,8 @@
 }
 
 .card-image:hover {
-  
+  background-color: #000000;
+  opacity: 0.3;
 }
 
 .card, .card-image {
@@ -113,6 +117,8 @@
   font-size: 16px;
   border-radius: 4em;
   font-weight: 700;
+  box-shadow: inset 1px 2px hsla(224, 84%, 74%);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
 
 #footer {
