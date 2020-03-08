@@ -8,10 +8,6 @@ h1, h2, h3, p {
 
 /* General Classes */
 
-.vertical-center {
-  padding: 50% 0;
-}
-
 .button {
   background-color: #FF6569; 
   color: white;
@@ -71,29 +67,17 @@ h1, h2, h3, p {
 
 .app-content {
   margin: 0 15vw;
+  width: 70vw;
+  height: 100vh;
 }
 
-.section-title {
-  font-size: 1.75em;
-  font-weight: 400;
-  margin-bottom: 2vh;
-}
-
-.about, .projects { 
-  height: 50vh;
-}
-
-.about-description {
-  padding: 33% 0;
+.section {
+  padding: 5% 0;
 }
 
 .about-title {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 400;
-}
-
-.about-left {
-
 }
 
 /* Card */
@@ -106,15 +90,27 @@ h1, h2, h3, p {
 }
 
 .card-image {
-  height: 33%;
   width: 100%;
   object-fit: cover;
   border-radius: 3px;
 }
 
+.card-content {
+  padding: 4%;
+}
+
+.card-title {
+  font-weight: 700;
+  padding-bottom: 5%;
+}
+
+.card-description {
+  padding-bottom: 5%;
+}
+
 .technology-container {
   width: 100%;
-  margin-bottom: 10%;
+  padding-bottom: 10%;
 }
 
 .technology-logo {
@@ -123,23 +119,7 @@ h1, h2, h3, p {
   padding: 0 3%;
 }
 
-.card-image:hover {
+/* .card-image:hover {
   background-color: #000000;
   opacity: 0.3;
-}
-
-.card-title, .card-description, .card-button, .technology-container {
-
-}
-
-.card-title {
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
-.card-description {
-}
-
-
-.card-button {
-}
+} */

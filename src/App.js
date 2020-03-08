@@ -4,63 +4,12 @@ import './App.css';
 import "@material/layout-grid/mdc-layout-grid.scss";
 
 import avatar from './images/hero/avatar.svg';
-import LinkedInIcon from './images/hero/linkedin.svg';
-import TwitterIcon from './images/hero/twitter.svg';
-import GithubIcon from './images/hero/github.svg';
-import arrowDown from './images/hero/arrow-down-4.svg';
-
-import expo1 from './images/projects/expo2019/expo1.png';
-import ginhawa1 from './images/projects/ginhawa/ginhawa1.png';
-import presentation1 from './images/projects/introWebsites/presentation1.png';
-import html from './images/technologies/html-5.svg';
-import css from './images/technologies/css-5.svg';
-import javascript from './images/technologies/javascript.svg';
-import heroku from './images/technologies/heroku.svg';
-import raspberryPi from './images/technologies/raspberry-pi.svg';
-import react from './images/technologies/react-1.svg';
-import socketIO from './images/technologies/socket-io.svg';
-import adobeXD from './images/technologies/adobe-xd-1.svg';
+import { projects, links } from './constants/data';
 
 function App() {
 
-  const images = {
-    websitePresentation: [
-      {
-        original: '',
-        thumbnail: '',
-      },
-    ],
-    dre: [
-      {
-        original: '',
-        thumbnail: '',
-      },
-    ],
-    ginhawa: [
-      {
-        original: '',
-        thumbnail: '',
-      },
-    ],
-  }
-
-  const socialMediaLinks = [
-    {
-      url: 'https://www.linkedin.com/in/mattdeo/',
-      alt: 'LinkedIn',
-      icon: LinkedInIcon
-    },
-    {
-      url: 'https://twitter.com/poki_mochi',
-      alt: 'LinkedIn',
-      icon: TwitterIcon
-    },
-    {
-      url: 'https://github.com/pokimochi',
-      alt: 'LinkedIn',
-      icon: GithubIcon
-    },
-  ]
+  const socialMediaLinks = links;
+  const cards = projects;
 
   // TODO Project Popup gallery 
   // - work experience showcase / timeline(to the right of Hi, "I'm Matt")
@@ -85,7 +34,7 @@ function App() {
           {
             socialMediaLinks.map(link => {
               return (
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                <a href={link.url} key={link.alt} target="_blank" rel="noopener noreferrer">
                   <img src={link.icon} alt={link.alt} className="social-media-links" />
                 </a>
               )
@@ -95,13 +44,15 @@ function App() {
         {/* <img className="hero-arrow" alt="arrow" src={arrowDown} /> */}
       </div>
       <div className="app-content">
-        <ScrollAnimation animateIn="fadeInUp" className="about section mdc-layout-grid mdc-layout-grid__inner" style={{ padding: 0 }}>
-          <div class="mdc-layout-grid__cell--span-5 about-description">
+        <ScrollAnimation animateIn="fadeInUp" className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: 0 }}>
+          <div className="section mdc-layout-grid__cell--span-6">
             <h1 className="about-title">Hi, I'm Matt</h1>
-            <p>I'm a senior Computer Science student at the University of South Florida and my passion is in front-end and UX development.</p>
+            <p className="about-desc">I'm a senior Computer Science student at the University of South Florida and my passion is in front-end and UX development.</p>
+            <br/>
+            <br/>
             <a href="https://drive.google.com/file/d/1wjW76ENYtxKFkrM9U10ZeK0FU0zv7rXL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button">Check Out My Resume!</a>
           </div>
-          <div class="mdc-layout-grid__cell--span-7">
+          <div className="mdc-layout-grid__cell--span-6">
             
           </div>
         </ScrollAnimation>
@@ -112,43 +63,31 @@ function App() {
             </h2>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce>
-            <div class="mdc-layout-grid" style={{ padding: 0 }}>
-              <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell card">
-                  <img className="card-image" src={presentation1} alt="Intro to Websites Thumbnail" />
-                  <h2 className="card-title">Intro To Websites</h2>
-                  <p className="card-description">Taught the basics of front-end web development by showing how to develop a web-based Tic-Tac-Toe game.</p>
-                  <div className="technology-container">
-                    <img className="technology-logo" src={html} alt="html" />
-                    <img className="technology-logo" src={css} alt="css" />
-                    <img className="technology-logo" src={javascript} alt="javascript" />
-                  </div>
-                  <a href="https://codepen.io/poki_mochi/pen/oNgVxye" target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
-                </div>
-                <div class="mdc-layout-grid__cell card">
-                  <img className="card-image" src={expo1} alt="Expo Project Thumbnail" />
-                  <h2 className="card-title">Miniature Disaster Response Robot</h2>
-                  <p className="card-description">A robot that locates figurines in hard to reach places. Demonstrated the practical uses of Computer Science to children and families at USF's Engineering EXPO Exhibit 2019.</p>
-                  <div className="technology-container">
-                    <img className="technology-logo" src={react} alt="reactNative" />
-                    <img className="technology-logo" src={raspberryPi} alt="raspberry pi" />
-                    <img className="technology-logo" src={heroku} alt="heroku" />
-                    <img className="technology-logo" src={socketIO} alt="socket.io" />
-                  </div>
-                  <a href="https://github.com/Society-of-Competitive-Programmers/Expo2019" target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
-                </div>
-                <div class="mdc-layout-grid__cell card">
-                  <img className="card-image" src={ginhawa1} alt="Ginhawa Thumbnail" />
-                  <div className="card-content">
-                    <h2 className="card-title">Non-Profit Website (In-Progress)</h2>
-                    <div className="card-description">Website that offers rehabilitation for abused women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.</div>
-                  </div>
-                  <div className="technology-container">
-                    <img className="technology-logo" src={adobeXD} alt="adobeXD" />
-                    <img className="technology-logo" src={react} alt="react" />
-                  </div>
-                  <a href="https://drive.google.com/file/d/1mqf05vxrexvDqYuLNq2NiFq6vTYFWHhx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button card-button">View Design</a>
-                </div>
+            <div className="mdc-layout-grid" style={{ padding: 0 }}>
+              <div className="mdc-layout-grid__inner">
+                {
+                  cards.map(card => 
+                    <div key={card.title} className="mdc-layout-grid__cell card">
+                      <img className="card-image" src={card.cardImg} alt={card.cardDesc} />
+                      <div className='card-content'>
+                        <h2 className="card-title">{card.title}</h2>
+                        <p className="card-description">{card.desc}</p>
+                        <div className="technology-container">
+                          {
+                            card.techImgs.map((img, index) => (index === 0) ?
+                              <img key={card.imgDesc[index]} className="technology-logo" style={{ padding: 0 }} src={img} alt={card.imgDesc[index]} />
+                              :
+                              <img key={card.imgDesc[index]} className="technology-logo" src={img} alt={card.imgDesc[index]} />
+                            )
+                          }
+                        </div>
+                        <a href={card.link} target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
+                        <br/>
+                        <br/>
+                      </div>
+                    </div>
+                  )
+                }
               </div>
             </div>
           </ScrollAnimation>
