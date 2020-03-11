@@ -16,13 +16,8 @@ function App() {
   // - Arrow animation @ the hero page
   // - content at the about
   // - e-mail link / label
-  // - scroll animation on S10 fix
   // - Button hover animation
-
-  // Would like TODO 
-  // - inline shadow for hero page OR outer shadow for content
-  // - refactor reusables into components
-  // - refactor css into multiple modules (per content/section) / Clean CSS
+  // - clean CSS
 
   return (
     <div className="app">
@@ -44,12 +39,10 @@ function App() {
         {/* <img className="hero-arrow" alt="arrow" src={arrowDown} /> */}
       </div>
       <div className="app-content">
-        <ScrollAnimation animateIn="fadeInUp" className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: 0 }}>
-          <div className="section mdc-layout-grid__cell--span-6">
+        <ScrollAnimation animateIn="fadeInUp" className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: 0 }} animateOnce>
+          <div className="about mdc-layout-grid__cell--span-6">
             <h1 className="about-title">Hi, I'm Matt</h1>
             <p className="about-desc">I'm a senior Computer Science student at the University of South Florida and my passion is in front-end and UX development.</p>
-            <br/>
-            <br/>
             <a href="https://drive.google.com/file/d/1wjW76ENYtxKFkrM9U10ZeK0FU0zv7rXL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button">Check Out My Resume!</a>
           </div>
           <div className="mdc-layout-grid__cell--span-6">
@@ -58,9 +51,7 @@ function App() {
         </ScrollAnimation>
         <div className="projects section">
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
-            <h2>
-              Projects
-            </h2>
+            <h1>Projects</h1>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce>
             <div className="mdc-layout-grid" style={{ padding: 0 }}>
@@ -69,22 +60,18 @@ function App() {
                   cards.map(card => 
                     <div key={card.title} className="mdc-layout-grid__cell card">
                       <img className="card-image" src={card.cardImg} alt={card.cardDesc} />
-                      <div className='card-content'>
-                        <h2 className="card-title">{card.title}</h2>
-                        <p className="card-description">{card.desc}</p>
-                        <div className="technology-container">
-                          {
-                            card.techImgs.map((img, index) => (index === 0) ?
-                              <img key={card.imgDesc[index]} className="technology-logo" style={{ padding: 0 }} src={img} alt={card.imgDesc[index]} />
-                              :
-                              <img key={card.imgDesc[index]} className="technology-logo" src={img} alt={card.imgDesc[index]} />
-                            )
-                          }
-                        </div>
-                        <a href={card.link} target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
-                        <br/>
-                        <br/>
+                      <h2 className="card-title">{card.title}</h2>
+                      <p className="card-description">{card.desc}</p>
+                      <div className="technology-container">
+                        {
+                          card.techImgs.map((img, index) =>
+                            <img key={card.imgDesc[index]} className="technology-logo" style={index === 0 ? { marginLeft: 0 } : {}} src={img} alt={card.imgDesc[index]} />
+                          )
+                        }
                       </div>
+                      <div className="card-button-container">
+                        <a href={card.link} target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
+                      </div> 
                     </div>
                   )
                 }

@@ -16,10 +16,10 @@ import GithubIcon from '../images/hero/github.svg';
 
 const projects = [
   {
-    title: 'Intro To Websites',
+    title: 'Intro To Websites Workshop',
     cardImg: presentation1,
     imgDesc: 'Intro to Websites Thumbnail',
-    desc: 'Taught the basics of front-end web development by showing how to develop a web-based Tic-Tac-Toe game.',
+    desc: 'Taught basic web development to USF students by showing them how to build a simple Tic-Tac-Toe game using HTML, CSS, and JavaScript.',
     techImgs: [
       html,
       css,
@@ -33,10 +33,10 @@ const projects = [
     link: 'https://codepen.io/poki_mochi/pen/oNgVxye'
   },
   {
-    title: 'Miniature Disaster Response Robot',
+    title: 'Mini-Disaster Response Robot',
     cardImg: expo1,
     imgDesc: 'Expo Project Thumbnail',
-    desc: 'A robot that locates figurines in hard to reach places. Demonstrated the practical uses of Computer Science to children and families at USF\'s Engineering EXPO Exhibit 2019.',
+    desc: 'A robot that locates figurines in hard to reach places. Demonstrated the practical uses of Computer Science to students and families at USF\'s Engineering EXPO Exhibit 2019.',
     techImgs: [
       react,
       raspberryPi,
@@ -46,7 +46,7 @@ const projects = [
     link: 'https://github.com/Society-of-Competitive-Programmers/Expo2019'
   },
   {
-    title: 'Non-Profit Website (In-Progress)',
+    title: 'Non-Profit Website (WIP)',
     cardImg: ginhawa1,
     imgDesc: 'Ginhawa Thumbnail',
     desc: 'Website that offers rehabilitation for abused women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
