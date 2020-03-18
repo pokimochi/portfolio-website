@@ -12,10 +12,6 @@ function App() {
   const socialMediaLinks = links;
   const cards = projects;
 
-  // TODO Project Popup gallery
-  // - Align about-image properly
-  // - Button Hover Effects
-
   return (
     <div className="app">
       <div className="hero-page">
@@ -45,7 +41,7 @@ function App() {
                 <p className="about-description">I'm an undergrad at the University of South Florida majoring in Computer Science and an incoming Junior Software Developer at a major fintech company in Tampa. Most of my work involves designing and developing UI.</p>
                 <br />
                 <div>
-                  <a href="https://drive.google.com/file/d/1h5XEgXS5r5oy_IflCqI3tW4J-Fcj2QZ_/view?usp=sharing"
+                  <a href="https://drive.google.com/file/d/1HlJG5tdGSwXcprGDyU1JAYVko1u5jrja/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button"
@@ -64,7 +60,7 @@ function App() {
           </div>
         </div>
         <div className="projects">
-          <ScrollAnimation animateIn="slideInUp" animateOnce>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce>
             <h1 className="projects-title">Projects</h1>
           </ScrollAnimation>
           <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0"}} >
