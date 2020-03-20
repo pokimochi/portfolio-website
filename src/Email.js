@@ -7,12 +7,7 @@ const sendEmail = (name, subject, message) => {
     message: message
   }
 
-  emailjs.send('gmail', process.env.REACT_APP_EMAIL_JS_TEMPLATE, templateValues, process.env.REACT_APP_EMAIL_JS_USER)
-  .then((response) => {
-    console.log('SUCCESS!', response.status, response.text);
-  }, (err) => {
-    console.log('FAILED...', err);
-  });
+  return emailjs.send('gmail', process.env.REACT_APP_EMAIL_JS_TEMPLATE, templateValues, process.env.REACT_APP_EMAIL_JS_USER);
 }
 
 export {

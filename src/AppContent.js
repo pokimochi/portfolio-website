@@ -78,7 +78,7 @@ const projectCards = [
     link: 'https://drive.google.com/file/d/1mqf05vxrexvDqYuLNq2NiFq6vTYFWHhx/view?usp=sharing'
   },
   {
-    title: 'Pickup Android App',
+    title: 'Pickup Sports Android App',
     cardImg: pickup,
     imgDesc: 'Pickup Thumbnail',
     desc: 'An Android application that allows users to find, create and join nearby pickup games for their preferred sport.',
