@@ -1,7 +1,10 @@
+// Projects
 import expo1 from './images/projects/expo2019/expo1.png';
 import ginhawa1 from './images/projects/ginhawa/ginhawa1.png';
 import presentation from './images/projects/introWebsites/presentation1.png';
 import pickup from './images/projects/pickup/pickup-search.png';
+
+// Technologies
 import html from './images/technologies/html-5.svg';
 import css from './images/technologies/css-3.svg';
 import javascript from './images/technologies/javascript.svg';
@@ -13,11 +16,16 @@ import adobeXD from './images/technologies/adobe-xd-1.svg';
 import android from './images/technologies/android-icon.svg';
 import express from './images/technologies/express.svg';
 
+// Social Media Icons
 import LinkedInIcon from './images/hero/linkedin.svg';
 import TwitterIcon from './images/hero/twitter.svg';
 import GithubIcon from './images/hero/github.svg';
 
-const projects = [
+// Others
+import avatar from './images/hero/avatar.svg';
+import aboutImage from './images/about/laptop.svg'
+
+const projectCards = [
   {
     title: 'Intro To Websites Workshop',
     cardImg: presentation,
@@ -58,7 +66,7 @@ const projects = [
     title: 'Non-Profit Website (WIP)',
     cardImg: ginhawa1,
     imgDesc: 'Ginhawa Thumbnail',
-    desc: 'Website for a non-profit organization that offers rehabilitation for abused women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
+    desc: 'A website for a Filipino non-profit organization that offers rehabilitation programs for women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
     techImgs: [
       react,
       adobeXD
@@ -88,7 +96,7 @@ const projects = [
   }
 ]
 
-const links = [
+const socialMediaLinks = [
   {
     url: 'https://www.linkedin.com/in/mattdeo/',
     alt: 'LinkedIn',
@@ -107,6 +115,8 @@ const links = [
 ]
 
 export {
-  projects,
-  links
+  projectCards,
+  socialMediaLinks,
+  avatar,
+  aboutImage
 }
