@@ -16,14 +16,19 @@ import adobeXD from './images/technologies/adobe-xd-1.svg';
 import android from './images/technologies/android-icon.svg';
 import express from './images/technologies/express.svg';
 
-// Social Media Icons
+// Hero Page
+import avatar from './images/hero/avatar.svg';
 import LinkedInIcon from './images/hero/linkedin.svg';
 import TwitterIcon from './images/hero/twitter.svg';
 import GithubIcon from './images/hero/github.svg';
 
-// Others
-import avatar from './images/hero/avatar.svg';
+// About Page
 import aboutImage from './images/about/laptop.svg'
+
+// Footer icon
+import LinkedInFooter from './images/footer/linkedin.svg';
+import TwitterFooter from './images/footer/twitter.svg';
+import GithubFooter from './images/footer/github.svg';
 
 const projectCards = [
   {
@@ -114,9 +119,28 @@ const socialMediaLinks = [
   },
 ]
 
+const footerLinks = [
+  {
+    url: 'https://www.linkedin.com/in/mattdeo/',
+    alt: 'LinkedIn',
+    icon: LinkedInFooter
+  },
+  {
+    url: 'https://github.com/pokimochi',
+    alt: 'Github',
+    icon: GithubFooter
+  },
+  {
+    url: 'https://twitter.com/poki_mochi',
+    alt: 'Twitter',
+    icon: TwitterFooter
+  },
+]
+
 export {
   projectCards,
   socialMediaLinks,
   avatar,
-  aboutImage
+  aboutImage,
+  footerLinks
 }

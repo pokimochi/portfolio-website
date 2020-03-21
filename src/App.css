@@ -73,6 +73,7 @@ input:focus, textarea:focus {
 }
 
 #hero-center {
+  max-height: 90vh;
   position: absolute;
   top: 47%;
   left: 50%;
@@ -107,7 +108,11 @@ input:focus, textarea:focus {
 /* Content */
 
 #app-content {
-  margin: 0 15vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: 10vh;
+  min-height: 100%;
+  min-height: 100%;
 }
 
 #about { 
@@ -169,6 +174,18 @@ input:focus, textarea:focus {
 
 #message-input {
   min-height: 12em;
+}
+
+#footer {
+  text-align: center;
+  color: 	#404040;
+  font-weight: 600;
+}
+
+.footer-icons {
+  padding: 0.5em;
+  width: 2em;
+  opacity: 0.7;
 }
 
 /* Card */

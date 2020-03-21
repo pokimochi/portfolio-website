@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './App.css';
 import "@material/layout-grid/mdc-layout-grid.scss";
-import { projectCards, socialMediaLinks, avatar, aboutImage } from './AppContent';
+import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks } from './AppContent';
 import { sendEmail } from './Email.js';
 
 function App() {
@@ -188,6 +188,18 @@ function App() {
           </ScrollAnimation>
         </div>
       </div>
+      <div id="footer">
+          <p>Matthew Deogracias</p>
+          {
+              footerLinks.map(link => {
+                return (
+                  <a href={link.url} key={link.alt} target="_blank" rel="noopener noreferrer">
+                    <img src={link.icon} alt={link.alt} className="footer-icons" />
+                  </a>
+                )
+              })
+            }
+        </div>
     </div>
   );
 }
