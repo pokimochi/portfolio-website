@@ -115,7 +115,7 @@ function App() {
                 name="email"
                 ref={register({
                   required: 'Required',
-                  maxLength: 70
+                  maxLength: 255
                 })}
               />
               {
@@ -153,7 +153,7 @@ function App() {
                 name="subject"
                 ref={register({
                   required: 'Required',
-                  maxLength: 70
+                  maxLength: 80
                 })}
               />
               {
@@ -173,7 +173,7 @@ function App() {
                 name="message"
                 ref={register({
                   required: 'Required',
-                  maxLength: 300
+                  maxLength: 500
                 })}
               />
               {
