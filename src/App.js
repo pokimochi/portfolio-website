@@ -56,7 +56,7 @@ function App() {
             <div className="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container" style={{paddingRight: "10%"}}>
               <ScrollAnimation animateIn="slideInUp" animateOnce>
                 <h1 id="about-title">Hi, I'm Matt</h1>
-                <p id="about-description">I'm an undergrad at the University of South Florida majoring in Computer Science and an incoming Junior Software Engineer at a major fintech company in Tampa. I enjoy trying out different web designs and developing software that creates a positive impact.</p>
+                <p id="about-description">I'm an undergrad at the University of South Florida majoring in Computer Science and an incoming Junior Software Engineer at a major fintech company in Tampa. I enjoy trying out different web designs and developing software that creates a positive impact on people's lives.</p>
                 <br />
                 <a href="https://drive.google.com/file/d/1HlJG5tdGSwXcprGDyU1JAYVko1u5jrja/view?usp=sharing"
                   target="_blank"

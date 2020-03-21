@@ -35,7 +35,7 @@ const projectCards = [
     title: 'Intro To Websites Workshop',
     cardImg: presentation,
     imgDesc: 'Intro to Websites Thumbnail',
-    desc: 'Taught basic web development to University of South Florida students by walking thorugh how to develop a Tic-Tac-Toe web app.',
+    desc: 'Taught basic web development to University of South Florida students by walking them through how to develop a Tic-Tac-Toe web app.',
     techImgs: [
       html,
       css,
