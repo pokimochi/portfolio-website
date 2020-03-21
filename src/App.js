@@ -82,7 +82,7 @@ function App() {
           <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0"}} >
             {
               projectCards.map(project => 
-                <ScrollAnimation key={project.title} animateIn="slideInUp" className="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card" animateOnce>
+                <ScrollAnimation key={project.title} animateIn="slideInUp" className="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone card" animateOnce>
                   <img className="card-image" src={project.cardImg} alt={project.cardDesc} />
                   <h2 className="card-title">{project.title}</h2>
                   <p className="card-description">{project.desc}</p>
