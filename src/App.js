@@ -21,7 +21,7 @@ function App() {
     setBtnClicked(true);
     setLoading(true);
 
-    sendEmail(values.name, values.subject, values.message).then((response) => {
+    sendEmail(values.email, values.name, values.subject, values.message).then((response) => {
       setMsgSent(true);
       setLoading(false);
     }, (err) => {
@@ -107,6 +107,25 @@ function App() {
           </ScrollAnimation>
           <ScrollAnimation animateIn="slideInUp" animateOnce style={{width: '90%'}}>
             <form onSubmit={handleSubmit(onClickSend)} id="email-form">
+              <input
+                id="email-input"
+                type="email"
+                className="textbox"
+                placeholder="E-mail Address"
+                name="email"
+                ref={register({
+                  required: 'Required',
+                  maxLength: 70
+                })}
+              />
+              {
+                errors.email && errors.email.type === "required" &&
+                <p className="error-message">Your input is required</p>
+              }
+              {
+                errors.email && errors.email.type === "maxLength" &&
+                <p className="error-message">Your input exceeds the maximum length</p>
+              }
               <input
                 id="name-input"
                 type="text"

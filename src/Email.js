@@ -1,7 +1,8 @@
 import emailjs from 'emailjs-com';
 
-const sendEmail = (name, subject, message) => {
+const sendEmail = (email, name, subject, message) => {
   const templateValues = {
+    from_email: email,
     from_name: name,
     subject: subject,
     message: message
