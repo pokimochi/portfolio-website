@@ -21,7 +21,9 @@ function App() {
   const override = css`
     display: block;
     position: absolute;
-    margin: 45vh 50vw;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   `;
 
   const onClickSend = values => {
