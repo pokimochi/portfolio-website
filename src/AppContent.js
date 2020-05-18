@@ -52,7 +52,7 @@ const projectCards = [
     title: 'Mini-Disaster Response Robot',
     cardImg: expo1,
     imgDesc: 'Expo Project Thumbnail',
-    desc: 'A robot that locates figurines at hard to reach areas. Demonstrated the practical uses of Computer Science to students and families at the USF Engineering EXPO Exhibit 2019.',
+    desc: 'A robot that locates figurines inside a maze. Demonstrated the practical uses of Computer Science to students and families at the USF Engineering EXPO Exhibit 2019.',
     techImgs: [
       react,
       heroku,
@@ -71,9 +71,8 @@ const projectCards = [
     title: 'Non-Profit Website (WIP)',
     cardImg: ginhawa1,
     imgDesc: 'Ginhawa Thumbnail',
-    desc: 'A website for a Filipino non-profit organization that offers rehabilitation programs for women, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
+    desc: 'Designed a mockup for a Filipino non-profit organization that offers rehabilitation programs, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
     techImgs: [
-      react,
       adobeXD
     ],
     techDesc: [
@@ -86,7 +85,7 @@ const projectCards = [
     title: 'Pickup Sports Android App',
     cardImg: pickup,
     imgDesc: 'Pickup Thumbnail',
-    desc: 'An Android application that allows users to find, create and join nearby pickup games for their preferred sport.',
+    desc: 'An Android app for finding, creating and joining nearby casual sports games.',
     techImgs: [
       android,
       express,
@@ -137,10 +136,16 @@ const footerLinks = [
   },
 ]
 
+// Returns the number of resources needed to load
+const numContent = () => {
+  return projectCards.length + socialMediaLinks.length + footerLinks.length + 2;
+}
+
 export {
   projectCards,
   socialMediaLinks,
   avatar,
   aboutImage,
-  footerLinks
+  footerLinks,
+  numContent
 }
