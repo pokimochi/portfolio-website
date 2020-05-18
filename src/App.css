@@ -16,6 +16,11 @@ input:focus, textarea:focus {
 
 /* General Classes */
 
+.loading-spinner {
+  width: 100vw;
+  height: 100vh;
+}
+
 .button {
   background-color: #FF6569; 
   color: white;
@@ -58,6 +63,13 @@ input:focus, textarea:focus {
 .success-message {
   color: #2E8B57;
   margin-top: 0.5%;
+}
+
+/* Loading Screen */
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #C9F0FF;
 }
 
 /* Hero Page */
@@ -117,6 +129,11 @@ input:focus, textarea:focus {
 
 #about { 
   margin: 0 1.5vw;
+}
+
+#email-link {
+  text-decoration: wavy underline;
+  color: #ff3237;
 }
 
 .about-container {
