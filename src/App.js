@@ -169,23 +169,32 @@ function App() {
               {
                 projectCards.map((project, index) =>
                   <ScrollAnimation
-                    className="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
+                    className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
                     key={project.title}
                     animateIn="slideInUp"
                     animateOnce
                   >
-                    <img
-                      className="card-image"
-                      src={project.cardImg}
-                      alt={project.cardDesc}
-                      onClick={() => {
+                    <div className="card-image-container">
+                      <img
+                        className="card-image"
+                        src={project.cardImg}
+                        alt={project.cardDesc}
+                        onLoad={handleResourceLoad}
+                      />
+                      <div
+                        className="card-image-overlay"
+                        onClick={() => {
                           setGalleryOpen(true);
                           setGalleryIndex(index);
                           setPhotoIndex(0);
-                        }
-                      }
-                      onLoad={handleResourceLoad}
-                    />
+                        }}
+                      >
+                        <div className="card-image-overlay-text">
+                          View Gallery
+                        </div>
+                      </div>
+                    </div>
+                    
                     <h2 className="card-title">{project.title}</h2>
                     <p className="card-description">{project.desc}</p>
                     <div className="technology-container">

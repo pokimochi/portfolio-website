@@ -227,6 +227,40 @@ input:focus, textarea:focus {
   object-fit: cover;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  transition: 0.3s;
+}
+
+.card-image-container {
+  position: relative;
+}
+
+.card-image-overlay-text {
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-image-container:hover .card-image-overlay {
+  opacity: 1;
+}
+
+.card-image-overlay {
+  height: 98%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: rgba(255, 101, 105, 0.75);
 }
 
 .card-title, .card-description, .technology-container { 
