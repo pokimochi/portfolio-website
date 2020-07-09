@@ -150,7 +150,7 @@ function App() {
                     className="button"
                     style={{ display: "inline-block" }}
                   >
-                    Check Out My Resume!
+                    View Resume
                   </a>
                 </ScrollAnimation>
               </div>
@@ -189,9 +189,9 @@ function App() {
                           setPhotoIndex(0);
                         }}
                       >
-                        <div className="card-image-overlay-text">
-                          View Gallery
-                        </div>
+                        <button className="card-image-overlay-text">
+                          Open Gallery
+                        </button>
                       </div>
                     </div>
                     
@@ -218,7 +218,7 @@ function App() {
                         rel="noopener noreferrer"
                         className="button card-button"
                       >
-                        View Project
+                        View Code
                       </a>
                     </div>
                   </ScrollAnimation>
@@ -343,7 +343,7 @@ function App() {
           </div>
         </div>
         <div id="footer">
-          <p>Matthew Deogracias</p>
+          <p>Made by Matthew Deogracias</p>
           {
             footerLinks.map(link => {
               return (

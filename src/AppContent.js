@@ -11,8 +11,10 @@ import expo5 from './images/projects/expo2019/IMG_1266.png';
 import presentation from './images/projects/introWebsites/presentation1.png';
 
 // Pickup
-import pickup1 from './images/projects/pickup/pickup-search.png';
-import pickup2 from './images/projects/pickup/IMG_222.png';
+import pickup1 from './images/projects/pickup/thumbnail.png';
+import pickup2 from './images/projects/pickup/create.png';
+import pickup3 from './images/projects/pickup/profile.png';
+import pickup4 from './images/projects/pickup/search.png';
 
 // Portfolio
 import portfolio1 from './images/projects/portfolio/portfolio.png';
@@ -51,7 +53,7 @@ const projectCards = [
       presentation
     ],
     imgDesc: 'Intro to Websites Thumbnail',
-    desc: 'Taught basic web development to University of South Florida students by walking them through how to develop a Tic-Tac-Toe web app.',
+    desc: 'Taught the basics of web development to University of South Florida students by walking them through how to create Tic-Tac-Toe game using HTML, CSS, and JavaScript.',
     techImgs: [
       html,
       css,
@@ -74,7 +76,7 @@ const projectCards = [
       expo5
     ],
     imgDesc: 'Expo Project Thumbnail',
-    desc: 'A robot that locates figurines inside a maze. Demonstrated the practical uses of Computer Science to students and families at the USF Engineering EXPO Exhibit 2019.',
+    desc: 'Developed a miniature robot that is controlled by a web app to demonstrate how robots can be used for disaster responses. Demonstrated at USF\'s Engineering EXPO 2019.',
     techImgs: [
       react,
       heroku,
@@ -93,8 +95,9 @@ const projectCards = [
     title: 'Pickup Sports Android App',
     cardImg: pickup1,
     galleryImgs: [
-      pickup1,
-      pickup2
+      pickup2,
+      pickup3,
+      pickup4
     ],
     imgDesc: 'Pickup Thumbnail',
     desc: 'An Android app for finding, creating and joining nearby casual sports games.',
@@ -130,7 +133,7 @@ const projectCards = [
       'JavaScript',
       'React'
     ],
-    link: 'https://github.com/pokimochi/Pickup-Android'
+    link: 'https://github.com/pokimochi/portfolio-website'
   },
 ]
 

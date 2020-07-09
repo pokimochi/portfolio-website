@@ -1,4 +1,4 @@
-.app, textarea, input {
+.app, textarea, input, button {
   font-family: 'Nunito', sans-serif;
 }
 
@@ -237,7 +237,10 @@ input:focus, textarea:focus {
 .card-image-overlay-text {
   color: white;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 700;
+  background: none;
+  border: none;
+  outline:none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -260,7 +263,7 @@ input:focus, textarea:focus {
   right: 0;
   opacity: 0;
   transition: .3s ease;
-  background-color: rgba(255, 101, 105, 0.75);
+  background-color: rgba(255, 101, 105, 0.8);
 }
 
 .card-title, .card-description, .technology-container { 
