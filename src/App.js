@@ -1,22 +1,40 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
+import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks, numContent } from './AppContent';
+
+import "@material/layout-grid/mdc-layout-grid.scss";
+
 import { css } from "@emotion/core";
+
+import { useForm } from 'react-hook-form';
+
 import RotateLoader from "react-spinners/RotateLoader";
 import MoonLoader from "react-spinners/MoonLoader";
-import { useForm } from 'react-hook-form';
+
 import ScrollAnimation from 'react-animate-on-scroll';
-import './App.css';
-import "@material/layout-grid/mdc-layout-grid.scss";
-import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks, numContent } from './AppContent';
+
 import { sendEmail } from './Email.js';
+
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 function App() {
   const { handleSubmit, errors, register } = useForm();
+
+  // Contact Me states
   const [isBtnClicked, setBtnClicked] = useState(false);
   const [isSending, setSending] = useState(false);
   const [isMsgSent, setMsgSent] = useState(false);
+
+  // Resource loading states
   const [numResources, setNumResources] = useState();
   const [isLoaded, setLoaded] = useState(false);
   const [numLoaded, setNumLoaded] = useState(0);
+
+  // Lightbox states
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  const [isGalleryOpen, setGalleryOpen] = useState(false);
 
   const override = css`
     display: block;
@@ -26,6 +44,7 @@ function App() {
     transform: translate(-50%, -50%);
   `;
 
+  // Send E-mail
   const onClickSend = values => {
     if (isSending) {
       return;
@@ -43,11 +62,14 @@ function App() {
     });
   }
 
+  // Set number of resources loaded
   useEffect(() => {
-    setNumResources(numContent());
-  },
-    []);
+      setNumResources(numContent());
+    },
+    []
+  );
 
+  // Check if all resources are loaded
   const handleResourceLoad = () => {
     setNumLoaded(numLoaded + 1);
 
@@ -56,29 +78,49 @@ function App() {
     }
   }
 
+  // Gallery
+  const getCardGalleryImg = (galleryIndex, photoIndex) => projectCards[galleryIndex].galleryImgs[photoIndex];
+  const getCardGalleryLength = (galleryIndex) => projectCards[galleryIndex].galleryImgs.length;
+  const nextSrc = (galleryIndex, photoIndex) => getCardGalleryImg(galleryIndex, (photoIndex + 1) % getCardGalleryLength(galleryIndex));
+  const prevSrc = (galleryIndex, photoIndex) => getCardGalleryImg(galleryIndex, (photoIndex + getCardGalleryLength(galleryIndex) - 1) % getCardGalleryLength(galleryIndex));
+
   return (
     <div className="app">
-      <div id="loading-screen" style={{display: !isLoaded ? "block" : "none"}}>
+      <div id="loading-screen" style={{ display: !isLoaded ? "block" : "none" }}>
         <RotateLoader
           size={30}
           margin={35}
           color="#FF6569"
           loading={!isLoaded}
           css={override}
-       />
+        />
       </div>
-      <div style={{display: isLoaded ? "block" : "none"}}>
+      <div style={{ display: isLoaded ? "block" : "none" }}>
         <div id="hero-page">
           <div id="hero-center">
-            <ScrollAnimation animateIn="fadeInUp" offset={0} animateOnce>
+            <ScrollAnimation
+              animateIn="fadeInUp"
+              offset={0}
+              animateOnce
+            >
               <img onLoad={handleResourceLoad} id="avatar" alt="Avatar" src={avatar} />
               <h1 id="hero-title"> Matthew Deogracias</h1>
               <h1 id="hero-sub-title">Software Developer</h1>
               {
                 socialMediaLinks.map(link => {
                   return (
-                    <a href={link.url} key={link.alt} target="_blank" rel="noopener noreferrer">
-                      <img onLoad={handleResourceLoad} src={link.icon} alt={link.alt} className="social-media-links" />
+                    <a
+                      href={link.url}
+                      key={link.alt}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        onLoad={handleResourceLoad}
+                        src={link.icon}
+                        alt={link.alt}
+                        className="social-media-links"
+                      />
                     </a>
                   )
                 })
@@ -89,13 +131,16 @@ function App() {
         <div id="app-content">
           <div id="about">
             <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }}>
-              <div className="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container" style={{ paddingRight: "10%" }}>
+              <div
+                className="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container"
+                style={{ paddingRight: "10%" }}
+              >
                 <ScrollAnimation animateIn="slideInUp" animateOnce>
                   <h1 id="about-title">Hi, I'm Matt</h1>
                   <p id="about-description">
                     I graduated from the University of South Florida with a <b>Bachelors Degree in Computer Science</b>.
-                    Currently working as a <b>Junior Software Engineer at J.P. Morgan Chase</b>. 
-                    I love trying out new things, especially when it comes to coding and cooking. 
+                    Currently working as a <b>Junior Software Engineer at J.P. Morgan Chase</b>.
+                    I love trying out new things, especially when it comes to coding and cooking.
                     Feel free to reach out through <a id="email-link" href="mailto: matthewdeog@gmail.com">e-mail</a> or by sending me a message below!
                   </p>
                   <br />
@@ -122,25 +167,65 @@ function App() {
             </ScrollAnimation>
             <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }} >
               {
-                projectCards.map(project =>
-                  <ScrollAnimation key={project.title} animateIn="slideInUp" className="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone card" animateOnce>
-                    <img onLoad={handleResourceLoad} className="card-image" src={project.cardImg} alt={project.cardDesc} />
+                projectCards.map((project, index) =>
+                  <ScrollAnimation
+                    className="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
+                    key={project.title}
+                    animateIn="slideInUp"
+                    animateOnce
+                  >
+                    <img
+                      className="card-image"
+                      src={project.cardImg}
+                      alt={project.cardDesc}
+                      onClick={() => {
+                          setGalleryOpen(true);
+                          setGalleryIndex(index);
+                          setPhotoIndex(0);
+                        }
+                      }
+                      onLoad={handleResourceLoad}
+                    />
                     <h2 className="card-title">{project.title}</h2>
                     <p className="card-description">{project.desc}</p>
                     <div className="technology-container">
                       {
                         project.techImgs.map((img, index) =>
-                          <img onLoad={handleResourceLoad} key={project.imgDesc[index]} className="technology-logo" style={index === 0 ? { marginLeft: 0 } : {}} src={img} alt={project.techDesc[index]} />
+                          <img
+                            className="technology-logo"
+                            onLoad={handleResourceLoad}
+                            key={project.imgDesc[index]}
+                            style={index === 0 ? { marginLeft: 0 } : {}}
+                            src={img}
+                            alt={project.techDesc[index]}
+                          />
                         )
                       }
                     </div>
                     <div className="card-button-container">
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="button card-button">View Project</a>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button card-button"
+                      >
+                        View Project
+                      </a>
                     </div>
                   </ScrollAnimation>
                 )
               }
             </div>
+            {isGalleryOpen && (
+              <Lightbox
+                mainSrc={getCardGalleryImg(galleryIndex, photoIndex)}
+                nextSrc={nextSrc(galleryIndex, photoIndex)}
+                prevSrc={prevSrc(galleryIndex, photoIndex)}
+                onCloseRequest={() => setGalleryOpen(false)}
+                onMovePrevRequest={() => setPhotoIndex((photoIndex + getCardGalleryLength(galleryIndex) - 1) % getCardGalleryLength(galleryIndex))}
+                onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % getCardGalleryLength(galleryIndex))}
+              />
+            )}
           </div>
           <div id="contacts">
             <ScrollAnimation animateIn="fadeInUp" animateOnce>

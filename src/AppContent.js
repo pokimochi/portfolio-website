@@ -1,8 +1,21 @@
 // Projects
+
+// Expo
 import expo1 from './images/projects/expo2019/expo1.png';
-import ginhawa1 from './images/projects/ginhawa/ginhawa1.png';
+import expo2 from './images/projects/expo2019/IMG_1224.png';
+import expo3 from './images/projects/expo2019/IMG_1230.png';
+import expo4 from './images/projects/expo2019/IMG_1246.jpg';
+import expo5 from './images/projects/expo2019/IMG_1266.png';
+
+// Intro to Websites
 import presentation from './images/projects/introWebsites/presentation1.png';
-import pickup from './images/projects/pickup/pickup-search.png';
+
+// Pickup
+import pickup1 from './images/projects/pickup/pickup-search.png';
+import pickup2 from './images/projects/pickup/IMG_222.png';
+
+// Portfolio
+import portfolio1 from './images/projects/portfolio/portfolio.png';
 
 // Technologies
 import html from './images/technologies/html-5.svg';
@@ -34,6 +47,9 @@ const projectCards = [
   {
     title: 'Intro To Websites Workshop',
     cardImg: presentation,
+    galleryImgs: [
+      presentation
+    ],
     imgDesc: 'Intro to Websites Thumbnail',
     desc: 'Taught basic web development to University of South Florida students by walking them through how to develop a Tic-Tac-Toe web app.',
     techImgs: [
@@ -51,6 +67,12 @@ const projectCards = [
   {
     title: 'Mini-Disaster Response Robot',
     cardImg: expo1,
+    galleryImgs: [
+      expo2,
+      expo3,
+      expo4,
+      expo5
+    ],
     imgDesc: 'Expo Project Thumbnail',
     desc: 'A robot that locates figurines inside a maze. Demonstrated the practical uses of Computer Science to students and families at the USF Engineering EXPO Exhibit 2019.',
     techImgs: [
@@ -68,22 +90,12 @@ const projectCards = [
     link: 'https://github.com/Society-of-Competitive-Programmers/Expo2019'
   },
   {
-    title: 'Non-Profit Website (WIP)',
-    cardImg: ginhawa1,
-    imgDesc: 'Ginhawa Thumbnail',
-    desc: 'Designed a mockup for a Filipino non-profit organization that offers rehabilitation programs, programs on mental-health therapy, and charity work for indigenous Filipino tribes.',
-    techImgs: [
-      adobeXD
-    ],
-    techDesc: [
-      'React',
-      'AdobeXD'
-    ],
-    link: 'https://drive.google.com/file/d/1mqf05vxrexvDqYuLNq2NiFq6vTYFWHhx/view?usp=sharing'
-  },
-  {
     title: 'Pickup Sports Android App',
-    cardImg: pickup,
+    cardImg: pickup1,
+    galleryImgs: [
+      pickup1,
+      pickup2
+    ],
     imgDesc: 'Pickup Thumbnail',
     desc: 'An Android app for finding, creating and joining nearby casual sports games.',
     techImgs: [
@@ -97,7 +109,29 @@ const projectCards = [
       'AdobeXD'
     ],
     link: 'https://github.com/pokimochi/Pickup-Android'
-  }
+  },
+  {
+    title: 'Portfolio Website',
+    cardImg: portfolio1,
+    galleryImgs: [
+      portfolio1,
+    ],
+    imgDesc: 'Portfolio Website Thumbnail',
+    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
+    techImgs: [
+      html,
+      css,
+      javascript,
+      react
+    ],
+    techDesc: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React'
+    ],
+    link: 'https://github.com/pokimochi/Pickup-Android'
+  },
 ]
 
 const socialMediaLinks = [
@@ -147,5 +181,5 @@ export {
   avatar,
   aboutImage,
   footerLinks,
-  numContent
+  numContent,
 }
