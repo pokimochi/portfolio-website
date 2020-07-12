@@ -73,7 +73,7 @@ function App() {
     setNumLoaded(numLoaded + 1);
 
     if (numResources === numLoaded) {
-      setLoaded(false);
+      setLoaded(true);
     }
   }
 
