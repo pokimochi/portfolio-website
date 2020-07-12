@@ -38,10 +38,9 @@ function App() {
 
   const override = css`
     display: block;
-    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   `;
 
   // Send E-mail
@@ -74,7 +73,7 @@ function App() {
     setNumLoaded(numLoaded + 1);
 
     if (numResources === numLoaded) {
-      setLoaded(true);
+      setLoaded(false);
     }
   }
 
@@ -144,14 +143,6 @@ function App() {
                     Feel free to reach out through <a id="email-link" href="mailto: matthewdeog@gmail.com">e-mail</a> or by sending me a message below!
                   </p>
                   <br />
-                  <a href="https://drive.google.com/file/d/1HlJG5tdGSwXcprGDyU1JAYVko1u5jrja/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button"
-                    style={{ display: "inline-block" }}
-                  >
-                    View Resume
-                  </a>
                 </ScrollAnimation>
               </div>
               <div className="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container">
