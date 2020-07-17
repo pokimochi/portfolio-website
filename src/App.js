@@ -160,7 +160,7 @@ function App() {
               {
                 projectCards.map((project, index) =>
                   <ScrollAnimation
-                    className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
+                    className="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
                     key={project.title}
                     animateIn="slideInUp"
                     animateOnce
