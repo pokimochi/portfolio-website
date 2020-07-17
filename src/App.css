@@ -76,8 +76,7 @@ input:focus, textarea:focus {
 /* Hero Page */
 
 #avatar {
-  max-width: 90%;
-  max-height: 40vh;
+  width: 325px;
 }
 
 #hero-page {

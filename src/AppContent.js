@@ -19,6 +19,9 @@ import pickup4 from './images/projects/pickup/search.png';
 // Portfolio
 import portfolio1 from './images/projects/portfolio/portfolio.png';
 
+// Patfolio
+import portfolio2 from './images/projects/patfolio/portfolio.png';
+
 // Technologies
 import html from './images/technologies/html-5.svg';
 import css from './images/technologies/css-3.svg';
@@ -52,7 +55,7 @@ const projectCards = [
     galleryImgs: [
       presentation
     ],
-    imgDesc: 'Intro to Websites Thumbnail',
+    imgDesc: 'Intro to Websites',
     desc: 'Taught the basics of web development to University of South Florida students by walking them through how to create Tic-Tac-Toe game using HTML, CSS, and JavaScript.',
     techImgs: [
       html,
@@ -75,8 +78,8 @@ const projectCards = [
       expo4,
       expo5
     ],
-    imgDesc: 'Expo Project Thumbnail',
-    desc: 'Developed a miniature robot that is controlled by a web app to demonstrate how robots can be used for disaster responses. Demonstrated at USF\'s Engineering EXPO 2019.',
+    imgDesc: 'Expo Project',
+    desc: 'Led a team to develop a miniature disaster response robot which demonstrated the practical uses of Computer Science to 1st to 12th grade students and their families at USF’s Engineering EXPO 2019',
     techImgs: [
       react,
       heroku,
@@ -119,7 +122,7 @@ const projectCards = [
     galleryImgs: [
       portfolio1,
     ],
-    imgDesc: 'Portfolio Website Thumbnail',
+    imgDesc: 'Portfolio Website',
     desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
     techImgs: [
       html,
@@ -134,6 +137,28 @@ const projectCards = [
       'React'
     ],
     link: 'https://github.com/pokimochi/portfolio-website'
+  },
+  {
+    title: 'Portfolio Website',
+    cardImg: portfolio2,
+    galleryImgs: [
+      portfolio2,
+    ],
+    imgDesc: 'Patricia Deogracias\'s Portfolio Website',
+    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify. Makes use of react-router-dom.',
+    techImgs: [
+      html,
+      css,
+      javascript,
+      react
+    ],
+    techDesc: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React'
+    ],
+    link: 'https://github.com/pokimochi/patfolio'
   },
 ]
 
