@@ -138,8 +138,9 @@ function App() {
                   <h1 id="about-title">Hi, I'm Matt</h1>
                   <p id="about-description">
                     I graduated from the University of South Florida with a <b>Bachelors Degree in Computer Science</b>.
-                    Currently working as a <b>Junior Software Engineer at J.P. Morgan Chase</b>.
-                    I love trying out new things, especially when it comes to coding and cooking.
+                    My passion for Software comes from its potential for good. Other than programming, I really love to cook for others! 
+                    <br />
+                    <br />
                     Feel free to reach out through <a id="email-link" href="mailto: matthewdeog@gmail.com">e-mail</a> or by sending me a message below!
                   </p>
                   <br />
