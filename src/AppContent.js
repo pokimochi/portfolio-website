@@ -145,7 +145,7 @@ const projectCards = [
       portfolio2,
     ],
     imgDesc: 'Patricia Deogracias\'s Portfolio Website',
-    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify. Makes use of react-router-dom.',
+    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
     techImgs: [
       html,
       css,
