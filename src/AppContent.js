@@ -35,7 +35,7 @@ import android from './images/technologies/android-icon.svg';
 import express from './images/technologies/express.svg';
 
 // Hero Page
-import avatar from './images/hero/avatar.svg';
+import avatar from './images/hero/test.svg';
 import LinkedInIcon from './images/hero/linkedin.svg';
 import TwitterIcon from './images/hero/twitter.svg';
 import GithubIcon from './images/hero/github.svg';
@@ -118,28 +118,6 @@ const projectCards = [
   },
   {
     title: 'Portfolio Website',
-    cardImg: portfolio1,
-    galleryImgs: [
-      portfolio1,
-    ],
-    imgDesc: 'Portfolio Website',
-    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
-    techImgs: [
-      html,
-      css,
-      javascript,
-      react
-    ],
-    techDesc: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React'
-    ],
-    link: 'https://github.com/pokimochi/portfolio-website'
-  },
-  {
-    title: 'Portfolio Website',
     cardImg: portfolio2,
     galleryImgs: [
       portfolio2,
@@ -198,6 +176,21 @@ const footerLinks = [
   },
 ]
 
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Java",
+  "Spring Boot",
+  "Docker",
+  "Kubernetes",
+  "Git",
+  "Express",
+  "C#",
+  "C++"
+];
+
 // Returns the number of resources needed to load
 const numContent = () => {
   return projectCards.length + socialMediaLinks.length + footerLinks.length + 2;
@@ -210,4 +203,5 @@ export {
   aboutImage,
   footerLinks,
   numContent,
+  skills
 }

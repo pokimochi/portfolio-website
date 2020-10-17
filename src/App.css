@@ -1,5 +1,5 @@
 .app, textarea, input, button {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 button { 
@@ -22,7 +22,7 @@ input:focus, textarea:focus {
 }
 
 .button {
-  background-color: #FF6569; 
+  background-color: rgba(26, 188, 156, 0.9); 
   color: white;
   padding: 1em;
   text-align: center;
@@ -40,9 +40,9 @@ input:focus, textarea:focus {
 
 .textbox {
   border-radius: 30px;
-  border-color: #696969;
+  border-color: rgb(44, 62, 80);
   border-style: solid;
-  border-width: 1.5px;
+  border-width: 4px;
   margin: 0.4em 0;
   font-size: 1em;
   padding: 1em 2em;
@@ -52,7 +52,7 @@ input:focus, textarea:focus {
 }
 
 .textbox:focus {
-  border-color: #FF6569;
+  border-color: rgba(26, 188, 156, 0.9);
 }
 
 .error-message {
@@ -69,34 +69,69 @@ input:focus, textarea:focus {
 
 #loading-screen {
   width: 100vw;
-  height: 100vh;
-  background-color: #C9F0FF;
+}
+
+/* Menu */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  position: absolute;
+  width: 92vw;
+  margin-top: 4vh;
+  margin-left: 117px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 5px 12px 0 0;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0 1vw;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 105px;
 }
 
 /* Hero Page */
 
-#avatar {
-  width: 325px;
+#hero-right {
+  margin: auto 15% auto auto;
 }
 
-#hero-page {
-  height: 100vh;
-  background-color: #C9F0FF;
+#hero-left {
+  color: #EFF6EE;
+  display: inline-block;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 15%;
 }
 
-#hero-center {
-  max-height: 90vh;
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #333745;
+.hero-image {
+  display: block;
   width: 100%;
 }
 
+#hero-page {
+  width: 100vw;
+  height: 97vh;
+}
+
 .social-media-links {
-  padding: 1em;
+  margin: 0 2em 0 0;
   width: 3.5em;
   transition: all .2s ease-in-out;
 }
@@ -105,23 +140,26 @@ input:focus, textarea:focus {
   transform: scale(1.1);
 }
 
-#hero-title, #hero-sub-title {
-  font-size: 2.4em;
-}
-
 #hero-title {
+  font-size: 7em;
+  max-width: 100%;
   font-weight: 900;
+  text-align: left;
+  line-height: 1.75em;
 }
 
-#hero-sub-title {
+.hero-sub-title {
+  margin: 0.75em 0;
+  line-height: 0.5em;
+  font-size: 3em;
   font-weight: 200;
 }
 
 /* Content */
 
 #app-content {
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
   margin-bottom: 10vh;
   min-height: 100%;
   min-height: 100%;
@@ -153,13 +191,16 @@ input:focus, textarea:focus {
   font-weight: 400;
 }
 
-#projects-title {
-  margin-bottom: 0.2em;
-  font-weight: 400;
+.content-title {
+  margin: 100px 0 50px;
+  font-size: 5em;
+  font-weight: 900;
+  color: #EFF6EE;
+  text-align: center;
 }
 
 #projects {
-  margin-top: 11vh;
+  margin-top: 5vh;
 }
 
 #contacts {
@@ -173,8 +214,9 @@ input:focus, textarea:focus {
 }
 
 #contacts-title {
-  margin-bottom: 0.1em;
-  font-weight: 700;
+  margin: 0.3em 0;
+  font-weight: 800;
+  color: #EFF6EE;
 }
 
 #email-form {
@@ -195,7 +237,7 @@ input:focus, textarea:focus {
 
 #footer {
   text-align: center;
-  color: 	#404040;
+  color: 	#EFF6EE;
   font-weight: 600;
 }
 
@@ -215,17 +257,28 @@ input:focus, textarea:focus {
   align-content: stretch;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  border-radius: 3px;
-  background-color: white;
+  border-radius: 30px;
+  background-color: rgba(254, 254, 254, 0.98);
   color: black;
+}
+
+.skill {
+  background-color: rgba(26, 188, 156, 0.9);
+  color: rgba(254, 254, 254, 0.98);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 2em;
+  text-align: center;
+  line-height: 2em;
 }
 
 .card-image {
   width: 100%;
   height: 25%;
   object-fit: cover;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   transition: 0.3s;
 }
 
@@ -262,7 +315,9 @@ input:focus, textarea:focus {
   right: 0;
   opacity: 0;
   transition: .3s ease;
-  background-color: rgba(255, 101, 105, 0.8);
+  background-color:rgba(26, 188, 156, 0.8);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-title, .card-description, .technology-container { 
@@ -285,11 +340,17 @@ input:focus, textarea:focus {
 }
 
 .card-title {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .technology-logo {
   height: 2.7em;
   max-width: 21%;
   margin: 0 3%;
+}
+
+#attribution {
+  color: #EFF6EE;
+  text-decoration: none;
+  font-weight: 200;
 }

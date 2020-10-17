@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks, numContent } from './AppContent';
+import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks, numContent, skills } from './AppContent';
 
 import "@material/layout-grid/mdc-layout-grid.scss";
 
@@ -63,8 +63,8 @@ function App() {
 
   // Set number of resources loaded
   useEffect(() => {
-      setNumResources(numContent());
-    },
+    setNumResources(numContent());
+  },
     []
   );
 
@@ -95,17 +95,39 @@ function App() {
         />
       </div>
       <div style={{ display: isLoaded ? "block" : "none" }}>
-        <div id="hero-page">
-          <div id="hero-center">
+        <ScrollAnimation
+              animateIn="fadeInUp"
+              offset={0}
+              animateOnce
+            >
+          <div class="topnav">
+            <a href="#home">LinkedIn</a>
+            <a href="#news">Github</a>
+            <a href="#contact">Twitter</a>
+            <div className="nav-right">
+              <a href="#">Skills</a>
+              <a href="#">Projects</a>
+              <a href="#">Contact</a>
+            </div> 
+          </div>ˇ
+        </ScrollAnimation>
+        <div id="hero-page" className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }}>
+          <div id="hero-left" className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone">
             <ScrollAnimation
               animateIn="fadeInUp"
               offset={0}
               animateOnce
             >
-              <img onLoad={handleResourceLoad} id="avatar" alt="Avatar" src={avatar} />
-              <h1 id="hero-title"> Matthew Deogracias</h1>
-              <h1 id="hero-sub-title">Software Developer</h1>
-              {
+              <h1 id="hero-title">
+                Hello World!
+            </h1>
+              <h1 className="hero-sub-title">
+                Matthew Deogracias
+              </h1>
+              <h1 className="hero-sub-title">
+                Full Stack Software Developer
+              </h1>
+              {/* {
                 socialMediaLinks.map(link => {
                   return (
                     <a
@@ -123,46 +145,44 @@ function App() {
                     </a>
                   )
                 })
-              }
+              } */}
+            </ScrollAnimation>
+          </div>
+          <div id="hero-right" className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone">
+            <ScrollAnimation
+              animateIn="fadeInUp"
+              offset={0}
+              animateOnce
+            >
+              <img onLoad={handleResourceLoad} className="hero-image" alt="Avatar" src={avatar} />
             </ScrollAnimation>
           </div>
         </div>
         <div id="app-content">
-          <div id="about">
-            <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }}>
-              <div
-                className="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container"
-                style={{ paddingRight: "10%" }}
-              >
-                <ScrollAnimation animateIn="slideInUp" animateOnce>
-                  <h1 id="about-title">Hi, I'm Matt</h1>
-                  <p id="about-description">
-                    I graduated from the University of South Florida with a <b>Bachelors Degree in Computer Science</b>.
-                    Currently working as a <b>Junior Software Engineer at J.P. Morgan Chase</b>.
-                    I love trying out new things, especially when it comes to coding and cooking.
-                    Feel free to reach out through <a id="email-link" href="mailto: matthewdeog@gmail.com">e-mail</a> or by sending me a message below!
-                  </p>
-                  <br />
-                </ScrollAnimation>
-              </div>
-              <div className="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone about-container">
-                <ScrollAnimation animateIn="slideInUp" animateOnce>
-                  <img onLoad={handleResourceLoad} src={aboutImage} id="about-image" alt="laptop" />
-                </ScrollAnimation>
-              </div>
+          <div id="skills">
+            <ScrollAnimation animateIn="fadeInUp" offset={0} animateOnce>
+              <h1 className="content-title">&lt;Skills/&gt;</h1>
+            </ScrollAnimation>
+            <div className="mdc-layout-grid mdc-layout-grid__inner">
+              {
+                skills.map(skill => 
+                  <span className="skill mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone">{skill}</span>
+                )
+              }
             </div>
           </div>
           <div id="projects">
-            <ScrollAnimation animateIn="fadeInUp" animateOnce>
-              <h1 id="projects-title">Projects</h1>
+            <ScrollAnimation animateIn="fadeInUp" offset={0} animateOnce>
+              <h1 className="content-title">&lt;Projects/&gt;</h1>
             </ScrollAnimation>
             <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }} >
               {
                 projectCards.map((project, index) =>
                   <ScrollAnimation
-                    className="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
+                    className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
                     key={project.title}
                     animateIn="slideInUp"
+                    offset={0}
                     animateOnce
                   >
                     <div className="card-image-container">
@@ -185,7 +205,7 @@ function App() {
                         </button>
                       </div>
                     </div>
-                    
+
                     <h2 className="card-title">{project.title}</h2>
                     <p className="card-description">{project.desc}</p>
                     <div className="technology-container">
@@ -209,7 +229,7 @@ function App() {
                         rel="noopener noreferrer"
                         className="button card-button"
                       >
-                        View Code
+                        View Source Code
                       </a>
                     </div>
                   </ScrollAnimation>
@@ -229,7 +249,7 @@ function App() {
           </div>
           <div id="contacts">
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
-              <h1 id="contacts-title">Get In Touch!</h1>
+              <h1 id="contacts-title" className="content-title">&lt;Contact/&gt;</h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="slideInUp" animateOnce style={{ width: '90%' }}>
               <form onSubmit={handleSubmit(onClickSend)} id="email-form">
@@ -334,7 +354,11 @@ function App() {
           </div>
         </div>
         <div id="footer">
-          <p>Made by Matthew Deogracias</p>
+          <p>
+            Made by Matthew Deogracias
+            <br />
+            <a id="attribution" href="https://www.freepik.com/vectors/technology">Technology vector created by stories - www.freepik.com</a>
+          </p>
           {
             footerLinks.map(link => {
               return (
