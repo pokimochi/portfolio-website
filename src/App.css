@@ -16,11 +16,6 @@ input:focus, textarea:focus {
 
 /* General Classes */
 
-.loading-spinner {
-  width: 100vw;
-  height: 100vh;
-}
-
 .button {
   background-color: rgba(26, 188, 156, 0.9); 
   color: white;
@@ -68,7 +63,8 @@ input:focus, textarea:focus {
 /* Loading Screen */
 
 #loading-screen {
-  width: 100vw;
+  margin-top: 35vh;
+  margin-right: 10vw;
 }
 
 /* Menu */
@@ -252,6 +248,7 @@ input:focus, textarea:focus {
 .card {
   margin: auto;
   min-height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-content: stretch;
@@ -307,7 +304,7 @@ input:focus, textarea:focus {
 }
 
 .card-image-overlay {
-  height: 98%;
+  height: 99%;
   position: absolute;
   top: 0;
   bottom: 0;

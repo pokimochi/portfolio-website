@@ -16,9 +16,6 @@ import pickup2 from './images/projects/pickup/create.png';
 import pickup3 from './images/projects/pickup/profile.png';
 import pickup4 from './images/projects/pickup/search.png';
 
-// Portfolio
-import portfolio1 from './images/projects/portfolio/portfolio.png';
-
 // Patfolio
 import portfolio2 from './images/projects/patfolio/portfolio.png';
 
@@ -35,18 +32,15 @@ import android from './images/technologies/android-icon.svg';
 import express from './images/technologies/express.svg';
 
 // Hero Page
-import avatar from './images/hero/test.svg';
-import LinkedInIcon from './images/hero/linkedin.svg';
-import TwitterIcon from './images/hero/twitter.svg';
-import GithubIcon from './images/hero/github.svg';
+import heroImage from './images/hero/heroImage.svg';
 
 // About Page
 import aboutImage from './images/about/laptop.svg'
 
 // Footer icon
-import LinkedInFooter from './images/footer/linkedin.svg';
-import TwitterFooter from './images/footer/twitter.svg';
-import GithubFooter from './images/footer/github.svg';
+import LinkedInFooter from './images/footer/linkedin-original.svg';
+import TwitterFooter from './images/footer/twitter-original.svg';
+import GithubFooter from './images/footer/github-original.svg';
 
 const projectCards = [
   {
@@ -140,24 +134,6 @@ const projectCards = [
   },
 ]
 
-const socialMediaLinks = [
-  {
-    url: 'https://www.linkedin.com/in/mattdeo/',
-    alt: 'LinkedIn',
-    icon: LinkedInIcon
-  },
-  {
-    url: 'https://github.com/pokimochi',
-    alt: 'Github',
-    icon: GithubIcon
-  },
-  {
-    url: 'https://twitter.com/poki_mochi',
-    alt: 'Twitter',
-    icon: TwitterIcon
-  },
-]
-
 const footerLinks = [
   {
     url: 'https://www.linkedin.com/in/mattdeo/',
@@ -193,13 +169,12 @@ const skills = [
 
 // Returns the number of resources needed to load
 const numContent = () => {
-  return projectCards.length + socialMediaLinks.length + footerLinks.length + 2;
+  return projectCards.length + footerLinks.length + 3;
 }
 
 export {
   projectCards,
-  socialMediaLinks,
-  avatar,
+  heroImage,
   aboutImage,
   footerLinks,
   numContent,

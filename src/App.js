@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { projectCards, socialMediaLinks, avatar, aboutImage, footerLinks, numContent, skills } from './AppContent';
+import { projectCards, heroImage, footerLinks, numContent, skills } from './AppContent';
 
 import "@material/layout-grid/mdc-layout-grid.scss";
 
@@ -8,7 +8,7 @@ import { css } from "@emotion/core";
 
 import { useForm } from 'react-hook-form';
 
-import RotateLoader from "react-spinners/RotateLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import MoonLoader from "react-spinners/MoonLoader";
 
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -86,10 +86,9 @@ function App() {
   return (
     <div className="app">
       <div id="loading-screen" style={{ display: !isLoaded ? "block" : "none" }}>
-        <RotateLoader
-          size={30}
-          margin={35}
-          color="#FF6569"
+        <PacmanLoader
+          size={90}
+          color="#1abc9c"
           loading={!isLoaded}
           css={override}
         />
@@ -101,13 +100,21 @@ function App() {
               animateOnce
             >
           <div class="topnav">
-            <a href="#home">LinkedIn</a>
-            <a href="#news">Github</a>
-            <a href="#contact">Twitter</a>
+            {
+              footerLinks.map(footer =>
+                <a
+                  alt={footer.alt.concat(" Link")}
+                  href={footer.url}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {footer.alt}
+                </a>
+              )
+            }
             <div className="nav-right">
-              <a href="#">Skills</a>
-              <a href="#">Projects</a>
-              <a href="#">Contact</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#contacts">Contact</a>
             </div> 
           </div>ˇ
         </ScrollAnimation>
@@ -127,25 +134,6 @@ function App() {
               <h1 className="hero-sub-title">
                 Full Stack Software Developer
               </h1>
-              {/* {
-                socialMediaLinks.map(link => {
-                  return (
-                    <a
-                      href={link.url}
-                      key={link.alt}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        onLoad={handleResourceLoad}
-                        src={link.icon}
-                        alt={link.alt}
-                        className="social-media-links"
-                      />
-                    </a>
-                  )
-                })
-              } */}
             </ScrollAnimation>
           </div>
           <div id="hero-right" className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone">
@@ -154,25 +142,25 @@ function App() {
               offset={0}
               animateOnce
             >
-              <img onLoad={handleResourceLoad} className="hero-image" alt="Avatar" src={avatar} />
+              <img onLoad={handleResourceLoad} className="hero-image" alt="Matthew Deogracias Writing Code" src={heroImage} />
             </ScrollAnimation>
           </div>
         </div>
         <div id="app-content">
           <div id="skills">
-            <ScrollAnimation animateIn="fadeInUp" offset={0} animateOnce>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <h1 className="content-title">&lt;Skills/&gt;</h1>
             </ScrollAnimation>
-            <div className="mdc-layout-grid mdc-layout-grid__inner">
+            <ScrollAnimation className="mdc-layout-grid mdc-layout-grid__inner" animateIn="fadeInUp" animateOnce>
               {
                 skills.map(skill => 
                   <span className="skill mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone">{skill}</span>
                 )
               }
-            </div>
+            </ScrollAnimation>
           </div>
           <div id="projects">
-            <ScrollAnimation animateIn="fadeInUp" offset={0} animateOnce>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <h1 className="content-title">&lt;Projects/&gt;</h1>
             </ScrollAnimation>
             <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }} >
@@ -182,7 +170,6 @@ function App() {
                     className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
                     key={project.title}
                     animateIn="slideInUp"
-                    offset={0}
                     animateOnce
                   >
                     <div className="card-image-container">
