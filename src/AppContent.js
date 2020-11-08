@@ -161,10 +161,10 @@ const skills = [
   "Spring Boot",
   "Docker",
   "Kubernetes",
+  "SQL",
+  "Jenkins",
   "Git",
   "Express",
-  "C#",
-  "C++"
 ];
 
 // Returns the number of resources needed to load
