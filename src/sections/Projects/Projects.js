@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { projectCards } from '../../AppContent';
 import Lightbox from 'react-image-lightbox';
 import ScrollAnimation from 'react-animate-on-scroll';
+import galleryIcon from './../../images/gallery-icon.svg';
 
 const Projects = (props) => {
   // Lightbox states
@@ -18,18 +19,23 @@ const Projects = (props) => {
   return (
     <div id="projects">
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <h1 className="content-title">&lt;Projects/&gt;</h1>
+      <h1 className="content-title">Projects</h1>
       </ScrollAnimation>
       <div className="mdc-layout-grid mdc-layout-grid__inner" style={{ padding: "0" }} >
         {
           projectCards.map((project, index) =>
             <ScrollAnimation
-              className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone card"
+              className="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone card"
               key={project.title}
               animateIn="slideInUp"
               animateOnce
             >
               <div className="card-image-container">
+                <img
+                  className="card-image-gallery-icon"
+                  src={galleryIcon}
+                  alt="gallery-view-icon"
+                />
                 <img
                   className="card-image"
                   src={project.cardImg}
@@ -44,13 +50,11 @@ const Projects = (props) => {
                     setPhotoIndex(0);
                   }}
                 >
-                  <button className="card-image-overlay-text">
-                    Open Gallery
-                </button>
+                  <button className="card-image-overlay-text">Click To View Gallery</button>
                 </div>
               </div>
 
-              <h2 className="card-title">{project.title}</h2>
+              <h2 className="card-title">{project.title}<br />{project.subtitle}</h2>
               <p className="card-description">{project.desc}</p>
               <div className="technology-container">
                 {
@@ -73,7 +77,7 @@ const Projects = (props) => {
                   rel="noopener noreferrer"
                   className="button card-button"
                 >
-                  View Source Code
+                  View In Github
               </a>
               </div>
             </ScrollAnimation>
