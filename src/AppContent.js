@@ -16,11 +16,9 @@ import pickup2 from './images/projects/pickup/create.png';
 import pickup3 from './images/projects/pickup/profile.png';
 import pickup4 from './images/projects/pickup/search.png';
 
-// Portfolio
-import portfolio1 from './images/projects/portfolio/portfolio.png';
-
+// Removed temporarily for website updates
 // Patfolio
-import portfolio2 from './images/projects/patfolio/portfolio.png';
+// import portfolio2 from './images/projects/patfolio/portfolio.png';
 
 // Technologies
 import html from './images/technologies/html-5.svg';
@@ -35,22 +33,17 @@ import android from './images/technologies/android-icon.svg';
 import express from './images/technologies/express.svg';
 
 // Hero Page
-import avatar from './images/hero/avatar.svg';
-import LinkedInIcon from './images/hero/linkedin.svg';
-import TwitterIcon from './images/hero/twitter.svg';
-import GithubIcon from './images/hero/github.svg';
-
-// About Page
-import aboutImage from './images/about/laptop.svg'
+import heroImage from './images/hero/heroImage.svg';
 
 // Footer icon
-import LinkedInFooter from './images/footer/linkedin.svg';
-import TwitterFooter from './images/footer/twitter.svg';
-import GithubFooter from './images/footer/github.svg';
+import LinkedInFooter from './images/footer/linkedin-original.svg';
+import TwitterFooter from './images/footer/twitter-original.svg';
+import GithubFooter from './images/footer/github-original.svg';
 
 const projectCards = [
   {
     title: 'Intro To Websites Workshop',
+    subtitle: '🗣️👥👥',
     cardImg: presentation,
     galleryImgs: [
       presentation
@@ -71,6 +64,7 @@ const projectCards = [
   },
   {
     title: 'Mini-Disaster Response Robot',
+    subtitle: '🧰🛠️🤖',
     cardImg: expo1,
     galleryImgs: [
       expo2,
@@ -95,7 +89,8 @@ const projectCards = [
     link: 'https://github.com/Society-of-Competitive-Programmers/Expo2019'
   },
   {
-    title: 'Pickup Sports Android App',
+    title: 'Pickup Sports Android Application',
+    subtitle: '👨‍💻 📲',
     cardImg: pickup1,
     galleryImgs: [
       pickup2,
@@ -116,68 +111,29 @@ const projectCards = [
     ],
     link: 'https://github.com/pokimochi/Pickup-Android'
   },
-  {
-    title: 'Portfolio Website',
-    cardImg: portfolio1,
-    galleryImgs: [
-      portfolio1,
-    ],
-    imgDesc: 'Portfolio Website',
-    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
-    techImgs: [
-      html,
-      css,
-      javascript,
-      react
-    ],
-    techDesc: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React'
-    ],
-    link: 'https://github.com/pokimochi/portfolio-website'
-  },
-  {
-    title: 'Portfolio Website',
-    cardImg: portfolio2,
-    galleryImgs: [
-      portfolio2,
-    ],
-    imgDesc: 'Patricia Deogracias\'s Portfolio Website',
-    desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify.',
-    techImgs: [
-      html,
-      css,
-      javascript,
-      react
-    ],
-    techDesc: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React'
-    ],
-    link: 'https://github.com/pokimochi/patfolio'
-  },
-]
-
-const socialMediaLinks = [
-  {
-    url: 'https://www.linkedin.com/in/mattdeo/',
-    alt: 'LinkedIn',
-    icon: LinkedInIcon
-  },
-  {
-    url: 'https://github.com/pokimochi',
-    alt: 'Github',
-    icon: GithubIcon
-  },
-  {
-    url: 'https://twitter.com/poki_mochi',
-    alt: 'Twitter',
-    icon: TwitterIcon
-  },
+  // Removed temporarily for website updates
+  // {
+  //   title: 'Portfolio Website',
+  //   cardImg: portfolio2,
+  //   galleryImgs: [
+  //     portfolio2,
+  //   ],
+  //   imgDesc: 'Patricia Deogracias\'s Portfolio Website',
+  //   desc: 'A responsive portfolio website, built using ReactJS and deployed via AWS Amplify. Makes use of react-router-dom.',
+  //   techImgs: [
+  //     html,
+  //     css,
+  //     javascript,
+  //     react
+  //   ],
+  //   techDesc: [
+  //     'HTML',
+  //     'CSS',
+  //     'JavaScript',
+  //     'React'
+  //   ],
+  //   link: 'https://github.com/pokimochi/patfolio'
+  // },
 ]
 
 const footerLinks = [
@@ -198,16 +154,100 @@ const footerLinks = [
   },
 ]
 
+const skills = [
+  {
+    category: "⚡ Programming Languages ⚡",
+    icon: "",
+    skillsDetails: [
+      {
+        name: "Java",
+        level: 4
+      },
+      {
+        name: "Groovy",
+        level: 3
+      },
+      {
+        name: "JavaScript",
+        level: 3
+      },
+      {
+        name: "SQL",
+        level: 3
+      },
+      {
+        name: "C++",
+        level: 2
+      }
+    ]
+  },
+  {
+    category: "💡 Frameworks 💡",
+    icon: "",
+    skillsDetails: [
+      {
+        name: "Spring Boot",
+        level: 3
+      },
+      {
+        name: "React",
+        level: 3
+      },
+      {
+        name: "Spock",
+        level: 2
+      },
+      {
+        name: "Jest",
+        level: 2
+      },
+      {
+        name: "Express",
+        level: 2
+      }
+    ]
+  },
+  {
+    category: "🛠️ Development Tools 🛠️",
+    icon: "",
+    skillsDetails: [
+      {
+        name: "Git",
+        level: 3
+      },
+      {
+        name: "Kafka",
+        level: 3
+      },
+      {
+        name: "Docker",
+        level: 2
+      },
+      {
+        name: "Kubernetes",
+        level: 2
+      },
+      {
+        name: "Gradle",
+        level: 2
+      },
+      {
+        name: "Node",
+        level: 2
+      }
+    ]
+  }
+];
+
 // Returns the number of resources needed to load
 const numContent = () => {
-  return projectCards.length + socialMediaLinks.length + footerLinks.length + 2;
+  return projectCards.length + footerLinks.length + 3;
 }
 
 export {
   projectCards,
-  socialMediaLinks,
-  avatar,
-  aboutImage,
+  heroImage,
   footerLinks,
   numContent,
+  skills
 }

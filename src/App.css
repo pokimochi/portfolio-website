@@ -1,5 +1,5 @@
 .app, textarea, input, button {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 button { 
@@ -16,14 +16,9 @@ input:focus, textarea:focus {
 
 /* General Classes */
 
-.loading-spinner {
-  width: 100vw;
-  height: 100vh;
-}
-
 .button {
-  background-color: #FF6569; 
-  color: white;
+  background-color: rgba(26, 188, 156, 0.9); 
+  color: #EEF5ED;
   padding: 1em;
   text-align: center;
   text-decoration: none;
@@ -40,9 +35,9 @@ input:focus, textarea:focus {
 
 .textbox {
   border-radius: 30px;
-  border-color: #696969;
+  border-color: rgb(44, 62, 80);
   border-style: solid;
-  border-width: 1.5px;
+  border-width: 4px;
   margin: 0.4em 0;
   font-size: 1em;
   padding: 1em 2em;
@@ -52,7 +47,7 @@ input:focus, textarea:focus {
 }
 
 .textbox:focus {
-  border-color: #FF6569;
+  border-color: rgba(26, 188, 156, 0.9);
 }
 
 .error-message {
@@ -68,35 +63,71 @@ input:focus, textarea:focus {
 /* Loading Screen */
 
 #loading-screen {
-  width: 100vw;
-  height: 100vh;
-  background-color: #C9F0FF;
+  margin-top: 35vh;
+  margin-right: 10vw;
+}
+
+/* Menu */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  position: absolute;
+  overflow: hidden;
+  width: 90vw;
+  margin: 4vh 5vw;
+}
+
+.nav-left {
+  float: left;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 5px 12px;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0 1vw;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+.nav-right {
+  float: right;
 }
 
 /* Hero Page */
 
-#avatar {
-  width: 325px;
+#hero-right {
+  margin: auto 15% auto 0;
+  display: inline-block;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center; 
+}
+
+#hero-left {
+  color: #EFF6EE;
+  display: inline-block;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 15%;
 }
 
 #hero-page {
   height: 100vh;
-  background-color: #C9F0FF;
-}
-
-#hero-center {
-  max-height: 90vh;
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #333745;
-  width: 100%;
 }
 
 .social-media-links {
-  padding: 1em;
+  margin: 0 2em 0 0;
   width: 3.5em;
   transition: all .2s ease-in-out;
 }
@@ -105,30 +136,28 @@ input:focus, textarea:focus {
   transform: scale(1.1);
 }
 
-#hero-title, #hero-sub-title {
-  font-size: 2.4em;
-}
-
 #hero-title {
+  font-size: 6em;
+  max-width: 100%;
   font-weight: 900;
+  text-align: left;
+  line-height: 1.75em;
 }
 
-#hero-sub-title {
+.hero-sub-title {
+  margin: 0.75em 0;
+  line-height: 0.5em;
+  font-size: 3em;
   font-weight: 200;
 }
 
 /* Content */
 
 #app-content {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-bottom: 10vh;
-  min-height: 100%;
-  min-height: 100%;
-}
-
-#about { 
-  margin: 0 1.5vw;
+  padding: 5vh 12vw 2vh 12vw;
+  margin-top: 5vh;
+  height: 100%;
+  background-color: #253341;
 }
 
 #email-link {
@@ -136,35 +165,21 @@ input:focus, textarea:focus {
   color: #ff3237;
 }
 
-.about-container {
-  justify-content: center;
-  padding-top: 10vh;
-}
-
-#about-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 70%;
-  border-radius: 50%;
-}
-
-#about-title {
-  font-size: 4em;
-  font-weight: 400;
-}
-
-#projects-title {
-  margin-bottom: 0.2em;
-  font-weight: 400;
+.content-title {
+  margin-bottom: 5vh;
+  font-size: 5em;
+  font-weight: 900;
+  color: #EFF6EE;
+  text-align: center;
 }
 
 #projects {
-  margin-top: 11vh;
+  margin-top: 4vh;
 }
 
 #contacts {
   height: 100%;
-  margin-top: 10%;
+  margin-top: 4vh;
   max-height: 80%;
   display: flex;
   flex-direction: column;
@@ -173,8 +188,9 @@ input:focus, textarea:focus {
 }
 
 #contacts-title {
-  margin-bottom: 0.1em;
-  font-weight: 700;
+  margin: 0.3em 0;
+  font-weight: 800;
+  color: #EFF6EE;
 }
 
 #email-form {
@@ -195,8 +211,9 @@ input:focus, textarea:focus {
 
 #footer {
   text-align: center;
-  color: 	#404040;
+  color: 	#EFF6EE;
   font-weight: 600;
+  margin-top: 10vh;
 }
 
 .footer-icons {
@@ -210,22 +227,34 @@ input:focus, textarea:focus {
 .card {
   margin: auto;
   min-height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-content: stretch;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  border-radius: 3px;
-  background-color: white;
+  border-radius: 30px;
+  background-color: rgba(254, 254, 254, 0.98);
   color: black;
+}
+
+.card-image-gallery-icon {
+  position: absolute;
+  width: 35px;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(26, 188, 156, 0.9);
+  opacity: 90%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .card-image {
   width: 100%;
   height: 25%;
   object-fit: cover;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   transition: 0.3s;
 }
 
@@ -254,7 +283,7 @@ input:focus, textarea:focus {
 }
 
 .card-image-overlay {
-  height: 98%;
+  height: 99%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -262,7 +291,9 @@ input:focus, textarea:focus {
   right: 0;
   opacity: 0;
   transition: .3s ease;
-  background-color: rgba(255, 101, 105, 0.8);
+  background-color:rgba(26, 188, 156, 0.8);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-title, .card-description, .technology-container { 
@@ -271,11 +302,14 @@ input:focus, textarea:focus {
 
 .card-description{
   flex-grow: 1;
+  line-height: 1.5em;
+  text-align: justify;
 }
 
 .technology-container {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-button-container {
@@ -285,11 +319,312 @@ input:focus, textarea:focus {
 }
 
 .card-title {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.8em;
+  text-align: center;
 }
 
 .technology-logo {
   height: 2.7em;
   max-width: 21%;
-  margin: 0 3%;
+  margin: 0 5%;
+}
+
+#attribution {
+  color: #EFF6EE;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+/* Skills */
+
+.skill {
+  margin: 0 2.5vw
+}
+
+.skill-title {
+  color: #EEF5ED;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.skill-label {
+  color: #EEF5ED;
+  margin: 30px 0 15px 0;
+  font-size: 1.5em;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+}
+
+.progress-bar > div {
+  width: 100%;
+  height: 16px;
+  color: white;
+  text-align: center;
+  flex: 1;
+  margin-right: 15px;
+  border-radius: 7px;
+}
+
+/* About */
+
+#about-skills {
+  text-align: center;
+  margin: 0 3vw;
+}
+
+.about-skill-title {
+  margin-bottom: 1em;
+  font-size: 1.75em;
+  color: #EEF5ED;
+  text-align: center;
+  margin: 5% 0 2.5% 0;
+  font-weight: 600;
+}
+
+.about-skill-label {
+  padding: 15px 35px;
+  margin: 10px 4px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 30px;
+  color: #28DDBE;
+  font-size: 1em;
+}
+
+#about-profile {
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-profile-avatar {
+  width: 60%;
+  -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+  border: 5px solid #28DDBE;
+}
+
+#about-profile-header {
+  color: #EEF5ED;
+  font-size: 3em;
+  margin: 5% 0;
+}
+
+#about-profile-description {
+  text-align: center;
+  color: #EEF5ED;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+/* Breakpoints */
+
+@media only screen and (max-width: 1550px) {
+  #hero-title {
+    font-size: 5.4em;
+  }
+
+  .hero-sub-title {
+    font-size: 2em;
+  }
+
+  .hero-image {
+    width: 540px;
+  }
+
+  #about-profile-avatar {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #app-content {
+    padding: 10vh 15vw;
+  }
+
+  #hero-title {
+    font-size: 4.5em;
+  }
+
+  .hero-sub-title {
+    font-size: 1.5em;
+  }
+
+  .hero-image {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  #hero-title {
+    font-size: 3.4em;
+  }
+
+  .hero-sub-title {
+    font-size: 1.25em;
+  }
+
+  .hero-image {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  #hero-left {
+    margin-left: 0;
+    padding-top: 10vh;
+  }
+
+  .hero-sub-title {
+    line-height: 1;
+    line-height: 1.25em;
+  }
+
+  #hero-right {
+    margin: 0 auto;
+  }
+  
+  #hero-title, .hero-sub-title {
+    text-align: center;
+    margin: 0;
+  }
+
+  .topnav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right {
+    display: block;
+    float: none;
+    height: 5vh;
+    margin: 0 auto;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  #hero-page {
+    padding-top: 20vh;
+  }
+
+  .content-title {
+    font-size: 4em;
+  }
+
+  .skill-title {
+    font-size: 2em;
+  }
+  
+  #about-profile {
+    margin: 5vh 0 0 0;
+  }
+
+  #about-profile-avatar {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  #hero-title {
+    font-size: 4em;
+  }
+
+  .hero-sub-title {
+    font-size: 1.25em;
+  }
+
+  .hero-image {
+    width: 400px;
+  }
+
+  .content-title {
+    font-size: 3em;
+  }
+
+  .about-skill-title {
+    font-size: 1.1em;
+  }
+
+  #app-content {
+    padding: 10vh 10vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #hero-title {
+    font-size: 2.5em;
+  }
+
+  .hero-sub-title {
+    font-size: 1em;
+  }
+
+  .content-title {
+    font-size: 2.25em;
+  }
+  
+  .hero-image {
+    width: 300px;
+  }
+
+  .topnav {
+    font-size: 0.8em;
+  }
+
+  #about-profile-avatar {
+    width: 60%;
+  }
+
+  .about-skill-title {
+    font-size: 1em;
+  }
+
+  .about-skill-label {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+
+  #about-profile-description {
+    font-size: 1em;
+  }
+
+  #about-profile-header {
+    font-size: 2em;
+  }
+
+  #app-content {
+    padding: 10vh 10vw;
+  }
+
+  .card-title {
+    font-size: 1.4em;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+  }
+
+  .technology-logo {
+    max-width: 16%;
+  }
 }
