@@ -6,10 +6,11 @@ const Navbar = () => {
   return (
     <ScrollAnimation
       animateIn="fadeInUp"
+      className="topnav"
       offset={0}
       animateOnce
     >
-      <div className="topnav">
+      <div className="nav-left">
         {
           footerLinks.map(footer =>
             <a
@@ -22,12 +23,12 @@ const Navbar = () => {
             </a>
           )
         }
-        <div className="nav-right">
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contacts">Contact</a>
-        </div>
-      </div>ˇ
+      </div>
+      <div className="nav-right">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contact</a>
+      </div>
     </ScrollAnimation>
   )
 };

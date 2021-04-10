@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <div id="contacts">
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <h1 id="contacts-title" className="content-title">&lt;Contact/&gt;</h1>
+        <h1 id="contacts-title" className="content-title">Contact</h1>
       </ScrollAnimation>
       <ScrollAnimation animateIn="slideInUp" animateOnce style={{ width: '90%' }}>
         <form onSubmit={handleSubmit(onClickSend)} id="email-form">
