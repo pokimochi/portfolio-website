@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const Navbar = () => {
   return (
     <ScrollAnimation
-      animateIn="fadeInUp"
+      animateIn="fadeIn"
       className="topnav"
       offset={0}
       animateOnce
@@ -25,7 +25,7 @@ const Navbar = () => {
         }
       </div>
       <div className="nav-right">
-        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contacts">Contact</a>
       </div>

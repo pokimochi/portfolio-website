@@ -2,7 +2,7 @@ import React from 'react';
 import { skills } from '../../AppContent';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Skills = (props) => {
+const About = (props) => {
   const getProgressBarColor = (progressLevel, currentLevel) => {
     if(!progressLevel || progressLevel < currentLevel) {
       return "white";
@@ -48,4 +48,4 @@ const Skills = (props) => {
   )
 };
 
-export default Skills;
+export default About;

@@ -35,9 +35,6 @@ import express from './images/technologies/express.svg';
 // Hero Page
 import heroImage from './images/hero/heroImage.svg';
 
-// About Page
-import aboutImage from './images/about/laptop.svg'
-
 // Footer icon
 import LinkedInFooter from './images/footer/linkedin-original.svg';
 import TwitterFooter from './images/footer/twitter-original.svg';
@@ -46,6 +43,7 @@ import GithubFooter from './images/footer/github-original.svg';
 const projectCards = [
   {
     title: 'Intro To Websites Workshop',
+    subtitle: '🗣️👥👥',
     cardImg: presentation,
     galleryImgs: [
       presentation
@@ -66,6 +64,7 @@ const projectCards = [
   },
   {
     title: 'Mini-Disaster Response Robot',
+    subtitle: '🧰🛠️🤖',
     cardImg: expo1,
     galleryImgs: [
       expo2,
@@ -90,7 +89,8 @@ const projectCards = [
     link: 'https://github.com/Society-of-Competitive-Programmers/Expo2019'
   },
   {
-    title: 'Pickup Sports Android App',
+    title: 'Pickup Sports Android Application',
+    subtitle: '👨‍💻 📲',
     cardImg: pickup1,
     galleryImgs: [
       pickup2,
@@ -156,7 +156,7 @@ const footerLinks = [
 
 const skills = [
   {
-    category: "Programming Languages",
+    category: "⚡ Programming Languages ⚡",
     icon: "",
     skillsDetails: [
       {
@@ -182,7 +182,7 @@ const skills = [
     ]
   },
   {
-    category: "Frameworks",
+    category: "💡 Frameworks 💡",
     icon: "",
     skillsDetails: [
       {
@@ -197,7 +197,6 @@ const skills = [
         name: "Spock",
         level: 2
       },
-      ,
       {
         name: "Jest",
         level: 2
@@ -209,7 +208,7 @@ const skills = [
     ]
   },
   {
-    category: "Development Tools",
+    category: "🛠️ Development Tools 🛠️",
     icon: "",
     skillsDetails: [
       {
@@ -231,6 +230,10 @@ const skills = [
       {
         name: "Gradle",
         level: 2
+      },
+      {
+        name: "Node",
+        level: 2
       }
     ]
   }
@@ -244,7 +247,6 @@ const numContent = () => {
 export {
   projectCards,
   heroImage,
-  aboutImage,
   footerLinks,
   numContent,
   skills

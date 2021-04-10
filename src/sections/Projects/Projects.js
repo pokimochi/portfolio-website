@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { projectCards } from '../../AppContent';
 import Lightbox from 'react-image-lightbox';
 import ScrollAnimation from 'react-animate-on-scroll';
+import galleryIcon from './../../images/gallery-icon.svg';
 
 const Projects = (props) => {
   // Lightbox states
@@ -31,6 +32,11 @@ const Projects = (props) => {
             >
               <div className="card-image-container">
                 <img
+                  className="card-image-gallery-icon"
+                  src={galleryIcon}
+                  alt="gallery-view-icon"
+                />
+                <img
                   className="card-image"
                   src={project.cardImg}
                   alt={project.cardDesc}
@@ -44,13 +50,11 @@ const Projects = (props) => {
                     setPhotoIndex(0);
                   }}
                 >
-                  <button className="card-image-overlay-text">
-                    Open Gallery
-                </button>
+                  <button className="card-image-overlay-text">Click To View Gallery</button>
                 </div>
               </div>
 
-              <h2 className="card-title">{project.title}</h2>
+              <h2 className="card-title">{project.title}<br />{project.subtitle}</h2>
               <p className="card-description">{project.desc}</p>
               <div className="technology-container">
                 {
@@ -73,7 +77,7 @@ const Projects = (props) => {
                   rel="noopener noreferrer"
                   className="button card-button"
                 >
-                  View Source Code
+                  View In Github
               </a>
               </div>
             </ScrollAnimation>
