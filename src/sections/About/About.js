@@ -36,7 +36,7 @@ const Skills = (props) => {
             I currently work as a Full Stack Software Engineer at <b>JP Morgan Chase</b> and recently graduated from the <b>University of South Florida</b>.
             <br />
             <br/>
-            As a <b>first generation Filipino immigrant</b> who grew up in a third-world country, I love working in tech because of its ability to enable positive change on economically disadvantaged areas.
+            As a <b>first generation Filipino immigrant</b>, I love working in tech because of its ability to enable positive change.
           </p>
         </div>
       </ScrollAnimation>
