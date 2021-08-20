@@ -148,7 +148,7 @@ const footerLinks = [
     icon: GithubFooter
   },
   {
-    url: 'https://twitter.com/poki_mochi',
+    url: 'https://twitter.com/mattdeo4',
     alt: 'Twitter',
     icon: TwitterFooter
   },
