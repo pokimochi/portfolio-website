@@ -33,10 +33,7 @@ const Skills = (props) => {
           <img src={avatar} alt="Matthew Deogracias Profile" id="about-profile-avatar" />
           <h4 id="about-profile-header">Hi, I'm Matt</h4>
           <p id="about-profile-description">
-            I currently work as a Full Stack Software Engineer at <b>JP Morgan Chase</b> and recently graduated from the <b>University of South Florida</b>.
-            <br />
-            <br/>
-            As a <b>first generation Filipino immigrant</b>, I love working in tech because of its ability to enable positive change.
+            I currently work as a <b>Software Engineer at Uber</b>. As a first generation Filipino immigrant, I love working in tech because of its ability to enable positive change.
           </p>
         </div>
       </ScrollAnimation>
